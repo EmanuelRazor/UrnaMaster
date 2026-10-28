@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrnaMaster v0.1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="page-shell">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">SIMULADOR DIDÁTICO</p>
+                <h1>UrnaMaster <span>v0.1</span></h1>
+            </div>
+            <a class="link-button" href="resultado.html">Ver apuração</a>
+        </header>
+
+        <section class="urna">
+            <div class="display-panel">
+                <div class="screen" id="screen">
+                    <div class="screen-header">
+                        <span>SEU VOTO PARA</span>
+                        <strong>PRESIDENTE DO UNIVERSO CYBERPUNK</strong>
+                    </div>
+
+                    <div class="vote-number-row">
+                        <span>Número:</span>
+                        <div id="digitBoxes" class="digit-boxes">
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+
+                    <div id="candidateArea" class="candidate-area">
+                        <div class="empty-state">
+                            Digite os 5 números do candidato
+                        </div>
+                    </div>
+
+                    <div id="instructions" class="instructions">
+                        <span>CONFIRMA para votar</span>
+                        <span>CORRIGE para apagar</span>
+                    </div>
+                </div>
+
+                <aside class="ad-card">
+                    <div class="ad-chip">PROPAGANDA FICTÍCIA</div>
+                    <div class="steak-icon" aria-hidden="true">🥩</div>
+                    <h2>LulaTron 13000</h2>
+                    <p class="ad-main">BIO PICANHA</p>
+                    <p>A carne artificial do futuro.</p>
+                    <small>100% sintética. 200% promessa.</small>
+                </aside>
+            </div>
+
+            <div class="keyboard-panel">
+                <div class="brand">
+                    <div class="brand-mark">UM</div>
+                    <div>
+                        <strong>UrnaMaster</strong>
+                        <span>Terminal de votação</span>
+                    </div>
+                </div>
+
+                <div class="keyboard" id="keyboard">
+                    <button data-number="1">1</button>
+                    <button data-number="2">2</button>
+                    <button data-number="3">3</button>
+                    <button data-number="4">4</button>
+                    <button data-number="5">5</button>
+                    <button data-number="6">6</button>
+                    <button data-number="7">7</button>
+                    <button data-number="8">8</button>
+                    <button data-number="9">9</button>
+                    <span></span>
+                    <button data-number="0">0</button>
+                    <span></span>
+                </div>
+
+                <div class="action-row">
+                    <button id="blankButton" class="action blank">BRANCO</button>
+                    <button id="correctButton" class="action correct">CORRIGE</button>
+                    <button id="confirmButton" class="action confirm">CONFIRMA</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="candidate-legend">
+            <div><b>13000</b><span>LulaTron</span></div>
+            <div><b>14000</b><span>Renan Tigrinho</span></div>
+            <div><b>22000</b><span>CyberNaro</span></div>
+        </section>
+
+        <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    </main>
+
+    <script src="js/urna.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuração — UrnaMaster</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="page-shell results-shell">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">PAINEL DE APURAÇÃO</p>
+                <h1>UrnaMaster <span>v0.1</span></h1>
+            </div>
+            <a class="link-button" href="index.html">Voltar para a urna</a>
+        </header>
+
+        <section class="results-grid">
+            <article class="result-card">
+                <div class="result-title">
+                    <div>
+                        <span class="status-badge safe">DADOS DO BANCO</span>
+                        <h2>Apuração real</h2>
+                    </div>
+                    <strong id="realTotal">0 votos</strong>
+                </div>
+                <div id="realResults" class="result-list"></div>
+                <div class="blank-result">
+                    <span>Votos em branco</span>
+                    <strong id="realBlank">0</strong>
+                </div>
+            </article>
+
+            <article class="result-card warning-card">
+                <div class="result-title">
+                    <div>
+                        <span class="status-badge warning">SIMULAÇÃO EXPLÍCITA</span>
+                        <h2>Resultado manipulado</h2>
+                    </div>
+                </div>
+
+                <p class="warning-text">
+                    Esta área demonstra matematicamente uma adulteração de apuração.
+                    Os valores abaixo não são gravados no banco de dados.
+                </p>
+
+                <div id="simResults" class="result-list"></div>
+
+                <div class="rules-box">
+                    <strong>Regras da demonstração</strong>
+                    <ul id="simulationRules"></ul>
+                </div>
+            </article>
+        </section>
+
+        <section class="admin-actions">
+            <button id="refreshButton" class="secondary-button">Atualizar resultados</button>
+            <button id="resetButton" class="danger-button">Zerar votação</button>
+        </section>
+
+        <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    </main>
+
+    <script src="js/resultado.js"></script>
+</body>
+</html>
