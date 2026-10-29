@@ -5,21 +5,23 @@ const candidates = {
         name: 'LulaTron',
         number: '13000',
         slogan: 'Bio Picanha — a carne artificial do futuro',
-        initials: 'LT',
+        image: 'img/lulatron.png',
         theme: 'lulatron'
     },
+
     '14000': {
         name: 'Renan Tigrinho',
         number: '14000',
         slogan: 'Tecnologia, velocidade e memes',
-        initials: 'RT',
+        image: 'img/renan-tigrinho.png',
         theme: 'renan'
     },
+
     '22000': {
         name: 'CyberNaro',
         number: '22000',
         slogan: 'Mais bytes, menos burocracia',
-        initials: 'CN',
+        image: 'img/cybernaro.png',
         theme: 'cybernaro'
     }
 };
@@ -126,16 +128,26 @@ function render() {
         return;
     }
 
-    candidateArea.innerHTML = `
-        <div class="candidate-card ${candidate.theme}">
-            <div class="candidate-avatar">${candidate.initials}</div>
-            <div>
-                <span>Candidato</span>
-                <h2>${candidate.name}</h2>
-                <p>${candidate.slogan}</p>
-            </div>
+candidateArea.innerHTML = `
+    <div class="candidate-card ${candidate.theme}">
+
+        <div class="candidate-photo">
+            <img
+                src="${candidate.image}"
+                alt="${candidate.name}"
+            >
         </div>
-    `;
+
+        <div class="candidate-info">
+            <span>Candidato</span>
+
+            <h2>${candidate.name}</h2>
+
+            <p>${candidate.slogan}</p>
+        </div>
+
+    </div>
+`;
 }
 
 async function confirmVote() {

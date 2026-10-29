@@ -198,21 +198,53 @@ button {
 
 .candidate-card {
     display: grid;
-    grid-template-columns: 104px 1fr;
+    grid-template-columns: 125px 1fr;
+
     align-items: center;
-    gap: 20px;
+
+    gap: 22px;
+}
+.candidate-photo {
+    width: 135px;
+    height: 165px;
+
+    border: 3px solid #252525;
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    background: #ddd;
 }
 
-.candidate-avatar {
-    width: 104px;
-    aspect-ratio: 1;
-    border-radius: 12px;
-    display: grid;
-    place-items: center;
+.candidate-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: top center;
+
+    display: block;
+}
+
+.candidate-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.candidate-info span {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.candidate-info h2 {
+    margin: 4px 0;
     font-size: 2rem;
-    font-weight: 900;
-    color: white;
-    box-shadow: inset 0 0 0 4px rgba(255,255,255,.18);
+}
+
+.candidate-info p {
+    margin: 0;
 }
 
 .candidate-card.lulatron .candidate-avatar {
